@@ -21,7 +21,7 @@ jobs:
           # Name of the OIDC provider as specified on the OIDC integration page in the JFrog Platform
           oidc-provider-name: roin-oidc
 
-- name: Docker login to Artifactory
+      - name: Docker login to Artifactory
         uses: docker/login-action@v3.3.0
         with:
           registry: elinaf.jfrog.io
