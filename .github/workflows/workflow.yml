@@ -26,8 +26,8 @@ jobs:
           # Ping the server
           jf rt ping
           # Collect environment variables for the build
-          jf rt bce
+          jf rt bce --project pro1 oidc-build 1
           # Collect VCS details from git and add them to the build
-          jf rt bag
+          jf rt bag --project pro1 oidc-build 1
           # Publish build info
-          jf rt bp
+          jf rt bp --project pro1 oidc-build 1
