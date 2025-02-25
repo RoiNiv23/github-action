@@ -21,13 +21,12 @@ jobs:
           # Name of the OIDC provider as specified on the OIDC integration page in the JFrog Platform
           oidc-provider-name: roin-oidc
 
-      - name: Run JFrog CLI
-        run: |
-          # Ping the server
-          jf rt ping
-          # Collect environment variables for the build
-          jf rt bce --project pro1 oidc-build 1
-          # Collect VCS details from git and add them to the build
-          jf rt bag --project pro1 oidc-build 1
-          # Publish build info
-          jf rt bp --project pro1 oidc-build 1
+- name: Docker login to Artifactory
+        uses: docker/login-action@v3.3.0
+        with:
+          registry: elinaf.jfrog.io
+          username: roin
+          password: Password1!
+      - name: docker pull
+        run: docker pull docker.ara-artifactory.volvocars.biz/library/alpine
+        shell: bash
