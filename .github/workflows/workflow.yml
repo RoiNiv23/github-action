@@ -28,5 +28,5 @@ jobs:
           username: roin
           password: Password1!
       - name: docker pull
-        run: docker pull docker.ara-artifactory.volvocars.biz/library/alpine
+        run: docker pull elinaf.jfrog.io/roin-docker-remote/library/alpine
         shell: bash
