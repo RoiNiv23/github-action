@@ -1,4 +1,4 @@
-name: "jpmorganio-accelerator"
+name: "Setup JFrog CLI OIDC Example2"
 on: push
 
 permissions:
